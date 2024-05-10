@@ -11,7 +11,7 @@ app.use(
 )
 const PORT = process.env.PORT || 4000;
 const openai = new OpenAI({
-    apiKey:"sk-proj-Y02w6jHBHLzXOMhOKDgnT3BlbkFJkOP5pwKZOy1D2DgqmwxH"
+    apiKey:process.env.API_KEY
 });
 
 app.post('/v1/api/trivia',async(req,res)=>{
