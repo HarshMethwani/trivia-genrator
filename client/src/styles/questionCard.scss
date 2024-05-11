@@ -1,0 +1,28 @@
+body {
+    // margin-inline: max();
+    font: 90%/1.4 system-ui;
+  }
+  
+  .card {
+    margin-top: 50px;
+    position: sticky;
+    top: 0;
+    background: rgb(221, 197, 248);
+    padding: 1.5rem;
+    box-shadow: 0 -0.5rem 1rem rgba(0 0 0 / 0.15);
+    border-radius: 30px;
+    color: black;
+  }
+  .card:hover{
+    animation: pop 0.3s linear 1;
+  }
+  @keyframes card{
+    50%  {transform: scale(1.2);}
+  }
+  @for $i from 1 through 5 {
+    .card:nth-child(#{$i}) {
+      top: $i + rem;
+      rotate: $i + deg;
+    }
+  }
+  
